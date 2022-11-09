@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.23)
-project("Skillbox practice works 25" VERSION 1.0 )
+project("Skillbox_practice_works_25" VERSION 1.0 )
 
 set(CMAKE_CXX_STANDARD 14)
 
