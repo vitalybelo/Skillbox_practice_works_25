@@ -6,7 +6,6 @@ using namespace std;
 
 
 string getCommand() {
-    cout << "\nВведите команду: ";
     string command;
     getline(cin,command);
     for (char & i : command) {
@@ -19,17 +18,21 @@ void clearStdin () {
     cin.clear();
     fflush(stdin);
 }
+void setlocaleRus () {
+    setlocale(LC_ALL, "Rus");
+}
 
 void setlocale1251 () {
-    setlocale(LC_ALL, "Russian");
+    setlocaleRus();
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 }
 
-/*
-void randomIntInit (int from, int to) {
+int randomInteger (const int from, const int to) {
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution<> dist(from,to);
-    // use gen(); or dist(gen);
-}*/
+
+    return dist(gen);
+    //return (int)gen();
+}
