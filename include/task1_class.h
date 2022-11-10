@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include "windows.h"
+#include "use_lib.h"
 #include "task1_structs.h"
 using namespace std;
 
