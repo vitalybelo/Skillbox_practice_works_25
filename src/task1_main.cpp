@@ -25,12 +25,16 @@ int main() {
         clearStdin();   // avoid echo on my pc station
         cout << "Введите пожалуйста команду: ";
         comm = getCommand();
+        // SCALPEL
         if (comm == "scalpel" || comm == "1") {
             surgery.applyScalpel();
+        // HEMOSTAT
         } else if (comm == "hemostat" || comm == "2") {
             surgery.applyHemostat();
+        // TWEEZERS
         } else if (comm == "tweezers" || comm == "3") {
             surgery.applyTweezers();
+        // SUTURE
         } else if (comm == "suture" || comm == "0") {
             surgeryOn = !surgery.applySuture();
         }

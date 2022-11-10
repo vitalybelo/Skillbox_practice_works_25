@@ -33,22 +33,22 @@ int main() {
         // DISPLAY
         if (comm == "display" || comm == "see") {
             EmulatorGPU::toPrint(ram.read());
-        // INPUT
+            // INPUT
         } else if (comm == "input" || comm == "kbd") {
             ram.write(kbd.getInput());
-        // SUM
+            // SUM
         } else if (comm == "sum") {
             cout << "Сумма = " << cpu.compute(ram.read()) << endl;
-        // ERASE
+            // ERASE
         } else if (comm == "clear" || comm == "erase") {
             ram.erase();
-        // LOAD
+            // LOAD
         } else if (comm == "load") {
             BufferArray buffer;
             if (disk.read(buffer)) {
                 ram.write(buffer);
             }
-        // SAVE
+            // SAVE
         } else if (comm == "save") {
             disk.write(ram.read());
         }

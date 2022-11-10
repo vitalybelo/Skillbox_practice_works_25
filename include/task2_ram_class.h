@@ -4,7 +4,7 @@ class EmulatorRAM {
 
 private:
 
-    BufferArray buffer;
+    BufferArray buffer{};
 
 public:
 

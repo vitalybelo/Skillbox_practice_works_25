@@ -10,7 +10,7 @@ private:
 
 public:
 
-    bool write(BufferArray &buffer) {
+    bool write(struct BufferArray buffer) {
 
         fileWriter.open(DATA_FILE, std::ios::out);
         if (fileWriter.is_open()) {
@@ -24,7 +24,7 @@ public:
         return false;
     }
 
-    bool read(BufferArray &buffer) {
+    bool read(struct BufferArray &buffer) {
 
         fileReader.open(DATA_FILE, std::ios::in);
         if (fileReader.is_open()) {
