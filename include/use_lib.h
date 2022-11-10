@@ -19,7 +19,7 @@ void clearStdin () {
     fflush(stdin);
 }
 void setlocaleRus () {
-    setlocale(LC_ALL, "Rus");
+    setlocale(LC_ALL, "Russian.Russia");
 }
 
 void setlocale1251 () {
